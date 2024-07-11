@@ -25,9 +25,9 @@ app.use(cors());
 app.use(express.json());
 
 // Define routes
-// app.use("/api/v1", UserRouter);
-// app.use("/api/v1", PostRouter);
-// app.use("/api/v1", CommentRouter);
+app.use("/api/v1", UserRouter);
+app.use("/api/v1", PostRouter);
+app.use("/api/v1", CommentRouter);
 
 app.use("/api/v1", (req, res) => {
   res.send("EcoConciencia API is running");

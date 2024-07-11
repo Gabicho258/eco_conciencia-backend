@@ -18,7 +18,7 @@ const COMMENT_ROUTES = {
   GET_BY_POST_ID: "/comment/post/:id",
   GET_BY_USER_ID: "/comment/user/:id",
   CREATE: "/comment/create",
-  DELETE: "/comment/:id",
+  DELETE: "/comment/delete/:id",
   UPDATE: "/comment/update/:id",
 };
 
