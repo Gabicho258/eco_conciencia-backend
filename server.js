@@ -21,10 +21,10 @@ const app = express();
 
 // Middleware
 const corsOptions = {
-  origin: "https://eco-conciencia.netlify.app", // Cambia esto por el dominio de tu frontend
-  optionsSuccessStatus: 200,
+  origin: "*", // Cambia esto por el dominio de tu frontend
 };
 app.use(cors(corsOptions));
+app.options("*", cors());
 app.use(express.json());
 
 // Define routes
