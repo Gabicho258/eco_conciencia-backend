@@ -20,14 +20,15 @@ await mongoose
 const app = express();
 
 // Middleware
-const corsOptions = {
-  origin: "https://eco-conciencia.netlify.app",
-  optionsSuccessStatus: 200,
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  allowedHeaders: "Content-Type,Authorization",
-};
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
+// const corsOptions = {
+//   origin: "https://eco-conciencia.netlify.app",
+//   optionsSuccessStatus: 200,
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   allowedHeaders: "Content-Type,Authorization",
+// };
+app.use(cors());
+// app.use(cors(corsOptions));
+// app.options("*", cors(corsOptions));
 app.use(express.json());
 
 // Define routes
