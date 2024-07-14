@@ -20,8 +20,11 @@ await mongoose
 const app = express();
 
 // Middleware
-
-app.use(cors());
+const corsOptions = {
+  origin: "https://eco-conciencia.netlify.app/", // Cambia esto por el dominio de tu frontend
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Define routes
