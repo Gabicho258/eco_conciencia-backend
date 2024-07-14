@@ -7,7 +7,7 @@ const postSchema = {
   photos_url: Array,
   labels: Array,
   district: String,
-  likes: Number,
+  likes: { type: Number, default: 0 },
 };
 
 const Post = mongoose.model(
